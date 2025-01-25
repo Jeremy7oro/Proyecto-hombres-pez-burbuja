@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://biv7udloloxb5"]
 
-[ext_resource type="Script" path="res://Jugar.gd" id="1_87uer"]
-[ext_resource type="Script" path="res://salir.gd" id="2_0ucjg"]
+[ext_resource type="Script" path="res://Menus/Jugar.gd" id="1_q33ny"]
+[ext_resource type="Script" path="res://Menus/salir.gd" id="2_t4anm"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -34,7 +34,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_font_sizes/font_size = 50
 text = "JUGAR"
-script = ExtResource("1_87uer")
+script = ExtResource("1_q33ny")
 
 [node name="Button2" type="Button" parent="ColorRect"]
 layout_mode = 2
@@ -56,4 +56,4 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_font_sizes/font_size = 50
 text = "SALIR"
-script = ExtResource("2_0ucjg")
+script = ExtResource("2_t4anm")
