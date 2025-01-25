@@ -17,3 +17,13 @@ offset_bottom = 643.0
 theme_override_font_sizes/font_size = 70
 text = "  Hola esta es una prueba para verificar el correcto funcionamiento de GitHub"
 autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 512.0
+offset_right = 1145.0
+offset_bottom = 1070.0
+theme_override_font_sizes/font_size = 70
+text = "Este es un cambuio de prueba"
+autowrap_mode = 2
