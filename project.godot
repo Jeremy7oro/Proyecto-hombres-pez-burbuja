@@ -14,9 +14,13 @@ config/name="Hombre-Pez-Burbuja"
 config/features=PackedStringArray("4.1", "Mobile")
 config/icon="res://ARTE/icon.svg"
 
+[audio]
+
+buses/default_bus_layout="res://Sonido/default_bus_layout.tres"
+
 [autoload]
 
-GLOBAL="*res://GLOBAL.gd"
+GLOBAL="*res://Prototipo/GLOBAL.gd"
 
 [input]
 

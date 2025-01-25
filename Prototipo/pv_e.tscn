@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://fsec0kfmaw1x"]
+[gd_scene load_steps=4 format=3 uid="uid://fsec0kfmaw1x"]
 
-[ext_resource type="Script" path="res://player1.gd" id="1_ax6kx"]
-[ext_resource type="Script" path="res://cpu.gd" id="2_5bbc2"]
-[ext_resource type="Script" path="res://tiempo.gd" id="3_hf0w5"]
-[ext_resource type="Script" path="res://h_slider.gd" id="4_h78eu"]
+[ext_resource type="Script" path="res://Prototipo/player1.gd" id="1_ax6kx"]
+[ext_resource type="Script" path="res://Prototipo/cpu.gd" id="2_5bbc2"]
+[ext_resource type="Script" path="res://Prototipo/tiempo.gd" id="3_hf0w5"]
 
 [node name="PvCPU" type="Node2D"]
 
@@ -49,10 +48,3 @@ offset_top = 53.0
 offset_right = 906.0
 offset_bottom = 80.0
 script = ExtResource("3_hf0w5")
-
-[node name="HSlider" type="HSlider" parent="."]
-offset_left = 403.0
-offset_top = 484.0
-offset_right = 878.0
-offset_bottom = 518.0
-script = ExtResource("4_h78eu")
