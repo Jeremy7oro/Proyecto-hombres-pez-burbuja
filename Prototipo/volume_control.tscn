@@ -26,6 +26,8 @@ offset_left = 260.0
 offset_top = 364.0
 offset_right = 772.0
 offset_bottom = 380.0
+max_value = 1.0
+step = 0.01
 
 [connection signal="value_changed" from="music_control" to="." method="_on_music_control_value_changed"]
 [connection signal="value_changed" from="effect_control" to="." method="_on_effect_control_value_changed"]
