@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://bil7gfwhnec2p"]
+
+[ext_resource type="Script" path="res://Prototipo/volume_control.gd" id="1_tuynb"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tuynb")
+
+[node name="music_control" type="HSlider" parent="."]
+layout_mode = 0
+offset_left = 257.0
+offset_top = 149.0
+offset_right = 774.0
+offset_bottom = 285.0
+max_value = 1.0
+step = 0.01
+
+[node name="effect_control" type="HSlider" parent="."]
+layout_mode = 0
+offset_left = 260.0
+offset_top = 364.0
+offset_right = 772.0
+offset_bottom = 380.0
+
+[connection signal="value_changed" from="music_control" to="." method="_on_music_control_value_changed"]
+[connection signal="value_changed" from="effect_control" to="." method="_on_effect_control_value_changed"]

@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmvufubvemf6w"]
+
+[ext_resource type="Script" path="res://Scripts/AudioManager.gd" id="1_w11bf"]
+[ext_resource type="AudioStream" uid="uid://cksdu31qo4gx4" path="res://Sonido/Music/Default 1.wav" id="2_cgsq0"]
+[ext_resource type="AudioStream" uid="uid://cvjhyn6on4c3s" path="res://Sonido/Sound Effects/Pickup_coin 1.wav" id="3_wkfl0"]
+
+[node name="AudioManager" type="Node"]
+script = ExtResource("1_w11bf")
+
+[node name="bg_music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_cgsq0")
+bus = &"Music"
+
+[node name="coin_effect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_wkfl0")
+bus = &"Sound Effect"
