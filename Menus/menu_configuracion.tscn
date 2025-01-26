@@ -2,15 +2,15 @@
 
 [ext_resource type="Script" path="res://Menus/BotonMenu.gd" id="1_csqew"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7jsue"]
-bg_color = Color(0.490196, 0.560784, 0.960784, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4jx3s"]
+bg_color = Color(0.333333, 0.419608, 0.870588, 1)
 corner_radius_top_left = 20
 corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4jx3s"]
-bg_color = Color(0.333333, 0.419608, 0.870588, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7jsue"]
+bg_color = Color(0.490196, 0.560784, 0.960784, 1)
 corner_radius_top_left = 20
 corner_radius_top_right = 20
 corner_radius_bottom_right = 20
@@ -49,20 +49,7 @@ offset_bottom = -217.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 40
-text = "Configuración"
-
-[node name="Label" type="Label" parent="ColorRect/titulo"]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = -207.0
-offset_top = 157.5
-offset_right = -65.0
-offset_bottom = 221.5
-grow_vertical = 2
-theme_override_font_sizes/font_size = 40
-text = "Sonido"
+text = "Sonidos"
 
 [node name="Menu" type="Button" parent="ColorRect"]
 layout_mode = 0
@@ -71,15 +58,49 @@ offset_top = 476.0
 offset_right = 706.0
 offset_bottom = 533.0
 theme_override_font_sizes/font_size = 35
-theme_override_styles/normal = SubResource("StyleBoxFlat_7jsue")
 theme_override_styles/hover = SubResource("StyleBoxFlat_4jx3s")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7jsue")
 text = "Volver"
 script = ExtResource("1_csqew")
 
-[node name="VSlider" type="VSlider" parent="."]
+[node name="Efectos" type="HSlider" parent="."]
 layout_mode = 0
-offset_left = 1017.0
-offset_top = 220.0
-offset_right = 1144.0
-offset_bottom = 780.0
-rotation = 1.56968
+offset_left = 432.0
+offset_top = 215.0
+offset_right = 1075.0
+offset_bottom = 270.0
+
+[node name="Efectos" type="Label" parent="Efectos"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -179.0
+offset_top = -34.5
+offset_right = -37.0
+offset_bottom = 29.5
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "Efectos
+"
+
+[node name="Musica" type="HSlider" parent="."]
+layout_mode = 0
+offset_left = 434.0
+offset_top = 324.0
+offset_right = 1077.0
+offset_bottom = 379.0
+
+[node name="Musica" type="Label" parent="Musica"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -179.0
+offset_top = -34.5
+offset_right = -37.0
+offset_bottom = 29.5
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "Musica
+"

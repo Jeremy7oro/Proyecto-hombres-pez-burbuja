@@ -8,7 +8,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	value += 2
+	value += 0.1
 	if GLOBAL.Turno == false:
 		if value == max_value:
 			GLOBAL.Turno = true

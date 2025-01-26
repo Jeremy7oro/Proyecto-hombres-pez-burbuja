@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://fsec0kfmaw1x"]
+[gd_scene load_steps=9 format=3 uid="uid://fsec0kfmaw1x"]
 
 [ext_resource type="Script" path="res://Prototipo/player1.gd" id="1_8gn6f"]
 [ext_resource type="Script" path="res://Prototipo/cpu.gd" id="2_b3f0h"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://Prototipo/tiempo.gd" id="3_q76w2"]
 [ext_resource type="Texture2D" uid="uid://d3bu8sjqaf3mm" path="res://ARTE/imagenes/Espada.png" id="3_r7tc2"]
 [ext_resource type="Script" path="res://Prototipo/win.gd" id="4_cavki"]
+[ext_resource type="Texture2D" uid="uid://xan5mu87ilp4" path="res://ARTE/juego burbuja/escudo abajo espada arriba.png" id="4_tm172"]
 [ext_resource type="Script" path="res://Prototipo/lose.gd" id="7_gcktx"]
 
 [node name="PvCPU" type="Node2D"]
@@ -44,6 +45,10 @@ text = "Hola"
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Player1"]
 volume_db = -14.0
 autoplay = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Player1"]
+position = Vector2(17, 82)
+texture = ExtResource("4_tm172")
 
 [node name="CPU" type="Node2D" parent="."]
 position = Vector2(-80, 12)

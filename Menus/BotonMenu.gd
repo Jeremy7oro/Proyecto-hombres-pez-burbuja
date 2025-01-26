@@ -1,6 +1,5 @@
 extends Button
 
 
-func _process(delta):
-	if button_pressed:
-		get_tree().change_scene_to_file("res://Menus/Menu.tscn")
+func  _pressed() -> void:
+	get_tree().change_scene_to_file("res://Menus/Menu.tscn")

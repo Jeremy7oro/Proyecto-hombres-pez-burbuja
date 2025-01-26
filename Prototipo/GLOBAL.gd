@@ -31,7 +31,7 @@ func _process(delta: float) -> void:
 					Lose = true
 	
 	#RESET
-	if Input.is_key_pressed(KEY_R) or Input.is_key_pressed(KEY_SPACE) :
+	if Input.is_action_pressed("Resetar") :
 		Win = false
 		Lose = false
 		Draw = false
@@ -39,3 +39,7 @@ func _process(delta: float) -> void:
 		Escudo_P1 = 0
 		Espada_P2 = 0
 		Escudo_P2 = 0
+	
+	#SAlIR
+	if Input.is_action_pressed("ui_cancel"):
+		get_tree().change_scene_to_file("res://Menus/Menu.tscn")
