@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://biv7udloloxb5"]
+[gd_scene load_steps=10 format=3 uid="uid://biv7udloloxb5"]
 
+[ext_resource type="Script" path="res://Menus/jugar.gd" id="1_10p47"]
 [ext_resource type="Script" path="res://Menus/ButtonConfiguracion.gd" id="2_iygfq"]
 [ext_resource type="Script" path="res://Menus/salir.gd" id="2_t4anm"]
 
@@ -78,6 +79,7 @@ theme_override_font_sizes/font_size = 50
 theme_override_styles/hover = SubResource("StyleBoxFlat_h78gf")
 theme_override_styles/normal = SubResource("StyleBoxFlat_e58kv")
 text = "PLAY"
+script = ExtResource("1_10p47")
 
 [node name="Configuracion" type="Button" parent="ColorRect"]
 layout_mode = 2
