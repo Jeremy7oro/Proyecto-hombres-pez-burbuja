@@ -29,3 +29,7 @@ func _process(delta: float) -> void:
 		#Aimación
 		if GLOBAL.Draw:
 			position.x += 1
+	
+	#Reset
+	if Input.is_key_pressed(KEY_R) or Input.is_key_pressed(KEY_SPACE) :
+		get_tree().change_scene_to_file("res://Prototipo/PvCPU.tscn")

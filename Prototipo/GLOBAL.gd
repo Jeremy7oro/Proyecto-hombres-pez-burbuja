@@ -32,7 +32,6 @@ func _process(delta: float) -> void:
 	
 	#RESET
 	if Input.is_key_pressed(KEY_R) or Input.is_key_pressed(KEY_SPACE) :
-		get_tree().change_scene_to_file("res://Prototipo/PvCPU.tscn")
 		Win = false
 		Lose = false
 		Draw = false
