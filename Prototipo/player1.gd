@@ -3,6 +3,9 @@ extends Node2D
 var Escudo : int 
 var Espada : int
 
+#Animaciones
+@onready var esc_pos = $Escudo.position
+@onready var esp_pos = $Espada.position
 
 func _ready() -> void:
 	Escudo = 0
