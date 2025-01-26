@@ -1,6 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://cjqj76texmsak"]
+[gd_scene load_steps=6 format=3 uid="uid://cjqj76texmsak"]
 
 [ext_resource type="Script" path="res://Menus/BotonMenu.gd" id="1_csqew"]
+[ext_resource type="Script" path="res://Menus/menu_configuracion.gd" id="1_vxqop"]
+
+[sub_resource type="GDScript" id="GDScript_cpb2j"]
+script/source = "extends Control
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4jx3s"]
 bg_color = Color(0.333333, 0.419608, 0.870588, 1)
@@ -25,6 +40,7 @@ offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
+script = SubResource("GDScript_cpb2j")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -69,6 +85,9 @@ offset_left = 432.0
 offset_top = 215.0
 offset_right = 1075.0
 offset_bottom = 270.0
+max_value = 1.0
+step = 0.01
+script = ExtResource("1_vxqop")
 
 [node name="Efectos" type="Label" parent="Efectos"]
 layout_mode = 1
@@ -90,6 +109,9 @@ offset_left = 434.0
 offset_top = 324.0
 offset_right = 1077.0
 offset_bottom = 379.0
+max_value = 1.0
+step = 0.01
+script = ExtResource("1_vxqop")
 
 [node name="Musica" type="Label" parent="Musica"]
 layout_mode = 1
@@ -104,3 +126,6 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 40
 text = "Musica
 "
+
+[connection signal="value_changed" from="Efectos" to="." method="_on_efectos_value_changed"]
+[connection signal="value_changed" from="Musica" to="." method="_on_musica_value_changed"]
