@@ -13,19 +13,21 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	
+	GLOBAL.Escudo_P1 = Escudo
+	GLOBAL.Espada_P1 = Espada
 	if $"../tiempo".value < $"../tiempo".max_value:
 		if Escudo <= 0:
 			if Input.is_action_pressed("Arriba"):
 				Escudo = 1
-				$Escudo.position = esc_pos + Vector2(200, -150)
+				
 			if Input.is_action_pressed("Medio"):
 				Escudo = 2
-				$Escudo.position = esc_pos + Vector2(200, 0)
+				
 			if Input.is_action_pressed("Abajo"):
 				Escudo = 3
-				$Escudo.position = esc_pos + Vector2(200,150)
+				
 		elif Espada <= 0:
+			$Label.text = str(GLOBAL.Escudo_P1)
 			if Input.is_action_pressed("Arriba") and not Escudo == 1:
 				Espada = 1
 			if Input.is_action_pressed("Medio") and not Escudo == 2:
@@ -33,8 +35,9 @@ func _process(delta: float) -> void:
 			if Input.is_action_pressed("Abajo") and not Escudo == 3:
 				Espada = 3
 		elif  Espada > 0:
-			$Espada.position = esp_pos + Vector2(220,150*(Espada-2))
-			$Espada.rotation = -90
+			
+			
+			$Label2.text = str(GLOBAL.Espada_P1)
 	
 	if GLOBAL.Draw:
 		position.x -= 1
