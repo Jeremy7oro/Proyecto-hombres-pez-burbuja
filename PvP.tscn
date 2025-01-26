@@ -1,0 +1,77 @@
+[gd_scene load_steps=4 format=3 uid="uid://ckokfl603xy80"]
+
+[ext_resource type="Script" path="res://Prototipo/player1.gd" id="1_dwepb"]
+[ext_resource type="Texture2D" uid="uid://d3bu8sjqaf3mm" path="res://ARTE/imagenes/Espada.png" id="2_orl1d"]
+[ext_resource type="Texture2D" uid="uid://m7narcwg12qu" path="res://ARTE/imagenes/Escudo.png" id="3_i528j"]
+
+[node name="PvP" type="Node2D"]
+
+[node name="Player1" type="Node2D" parent="."]
+position = Vector2(92, 6)
+script = ExtResource("1_dwepb")
+
+[node name="Espada" type="Sprite2D" parent="Player1"]
+position = Vector2(291, 319)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_orl1d")
+
+[node name="Escudo" type="Sprite2D" parent="Player1"]
+position = Vector2(300, 363)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_i528j")
+flip_h = true
+
+[node name="Label" type="Label" parent="Player1"]
+offset_left = 36.0
+offset_top = 204.0
+offset_right = 214.0
+offset_bottom = 314.0
+theme_override_font_sizes/font_size = 80
+text = "Hola"
+
+[node name="Label2" type="Label" parent="Player1"]
+offset_left = 42.0
+offset_top = 366.0
+offset_right = 220.0
+offset_bottom = 476.0
+theme_override_font_sizes/font_size = 80
+text = "Hola"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Player1"]
+volume_db = -14.0
+autoplay = true
+
+[node name="Player2" type="Node2D" parent="."]
+position = Vector2(92, 6)
+script = ExtResource("1_dwepb")
+
+[node name="Espada" type="Sprite2D" parent="Player2"]
+position = Vector2(291, 319)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_orl1d")
+
+[node name="Escudo" type="Sprite2D" parent="Player2"]
+position = Vector2(300, 363)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_i528j")
+flip_h = true
+
+[node name="Label" type="Label" parent="Player2"]
+offset_left = 36.0
+offset_top = 204.0
+offset_right = 214.0
+offset_bottom = 314.0
+theme_override_font_sizes/font_size = 80
+text = "Hola"
+
+[node name="Label2" type="Label" parent="Player2"]
+offset_left = 42.0
+offset_top = 366.0
+offset_right = 220.0
+offset_bottom = 476.0
+theme_override_font_sizes/font_size = 80
+text = "Hola"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Player2"]
+volume_db = -14.0
+autoplay = true
