@@ -41,6 +41,10 @@ offset_bottom = 476.0
 theme_override_font_sizes/font_size = 80
 text = "Hola"
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Player1"]
+volume_db = -14.0
+autoplay = true
+
 [node name="CPU" type="Node2D" parent="."]
 position = Vector2(-80, 12)
 script = ExtResource("2_b3f0h")
