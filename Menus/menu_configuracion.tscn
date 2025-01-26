@@ -1,4 +1,20 @@
-[gd_scene format=3 uid="uid://cjqj76texmsak"]
+[gd_scene load_steps=4 format=3 uid="uid://cjqj76texmsak"]
+
+[ext_resource type="Script" path="res://Menus/BotonMenu.gd" id="1_csqew"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7jsue"]
+bg_color = Color(0.490196, 0.560784, 0.960784, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4jx3s"]
+bg_color = Color(0.333333, 0.419608, 0.870588, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [node name="menuConfiguracion" type="Control"]
 layout_mode = 3
@@ -33,7 +49,7 @@ offset_bottom = -217.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 40
-text = "Configuraciòn"
+text = "Configuración"
 
 [node name="Label" type="Label" parent="ColorRect/titulo"]
 layout_mode = 1
@@ -48,19 +64,22 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 40
 text = "Sonido"
 
-[node name="Button" type="Button" parent="ColorRect"]
+[node name="Menu" type="Button" parent="ColorRect"]
 layout_mode = 0
-offset_left = 491.0
+offset_left = 533.0
 offset_top = 476.0
-offset_right = 664.0
+offset_right = 706.0
 offset_bottom = 533.0
 theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_7jsue")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4jx3s")
 text = "Volver"
+script = ExtResource("1_csqew")
 
 [node name="VSlider" type="VSlider" parent="."]
 layout_mode = 0
-offset_left = 1012.0
-offset_top = 203.0
-offset_right = 1139.0
-offset_bottom = 763.0
+offset_left = 1017.0
+offset_top = 220.0
+offset_right = 1144.0
+offset_bottom = 780.0
 rotation = 1.56968
