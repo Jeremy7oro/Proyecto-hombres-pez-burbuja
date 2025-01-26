@@ -1,0 +1,42 @@
+[gd_scene load_steps=8 format=3 uid="uid://c5qlno7odxusq"]
+
+[ext_resource type="Texture2D" uid="uid://n1icggsl8u45" path="res://animaciones/juego burbuja/escudo abajo espada arriba.png" id="1_1h4yv"]
+[ext_resource type="Texture2D" uid="uid://7487pdqbruab" path="res://animaciones/juego burbuja/escudo abajo espada medio.png" id="2_xfqsd"]
+[ext_resource type="Texture2D" uid="uid://dojhrbtx6crq0" path="res://animaciones/juego burbuja/escudo arriba espada abajo.png" id="3_7dek5"]
+[ext_resource type="Texture2D" uid="uid://dppjd88hatx5k" path="res://animaciones/juego burbuja/escudo arriba espada medio.png" id="4_1uvkq"]
+[ext_resource type="Texture2D" uid="uid://do1ephbb073nn" path="res://animaciones/juego burbuja/escudo medio espada abajo.png" id="5_7ufxu"]
+[ext_resource type="Texture2D" uid="uid://bvtxawcxpusio" path="res://animaciones/juego burbuja/escudo medio espada arriba.png" id="6_ifo36"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n05vb"]
+animations = [{
+"frames": [{
+"duration": 0.1,
+"texture": ExtResource("1_1h4yv")
+}, {
+"duration": 0.1,
+"texture": ExtResource("2_xfqsd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7dek5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1uvkq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7ufxu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ifo36")
+}],
+"loop": true,
+"name": &"ATAQUE",
+"speed": 5.0
+}]
+
+[node name="Jugador" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(468, 352)
+sprite_frames = SubResource("SpriteFrames_n05vb")
+animation = &"ATAQUE"
+frame_progress = 0.517773
