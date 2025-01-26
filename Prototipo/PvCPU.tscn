@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://fsec0kfmaw1x"]
+[gd_scene load_steps=8 format=3 uid="uid://fsec0kfmaw1x"]
 
 [ext_resource type="Script" path="res://Prototipo/player1.gd" id="1_8gn6f"]
 [ext_resource type="Script" path="res://Prototipo/cpu.gd" id="2_b3f0h"]
@@ -6,14 +6,16 @@
 [ext_resource type="Script" path="res://Prototipo/tiempo.gd" id="3_q76w2"]
 [ext_resource type="Texture2D" uid="uid://d3bu8sjqaf3mm" path="res://ARTE/imagenes/Espada.png" id="3_r7tc2"]
 [ext_resource type="Script" path="res://Prototipo/win.gd" id="4_cavki"]
+[ext_resource type="Script" path="res://Prototipo/lose.gd" id="7_gcktx"]
 
 [node name="PvCPU" type="Node2D"]
 
 [node name="Player1" type="Node2D" parent="."]
+position = Vector2(92, 6)
 script = ExtResource("1_8gn6f")
 
 [node name="Espada" type="Sprite2D" parent="Player1"]
-position = Vector2(300, 319)
+position = Vector2(291, 319)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("3_r7tc2")
 
@@ -21,6 +23,7 @@ texture = ExtResource("3_r7tc2")
 position = Vector2(300, 363)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("2_qeoj1")
+flip_h = true
 
 [node name="Label" type="Label" parent="Player1"]
 offset_left = 36.0
@@ -39,22 +42,35 @@ theme_override_font_sizes/font_size = 80
 text = "Hola"
 
 [node name="CPU" type="Node2D" parent="."]
-position = Vector2(749, 178)
+position = Vector2(-80, 12)
 script = ExtResource("2_b3f0h")
 
 [node name="Label" type="Label" parent="CPU"]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 995.0
+offset_top = 222.0
+offset_right = 1173.0
+offset_bottom = 332.0
 theme_override_font_sizes/font_size = 80
 text = "Hola"
 
 [node name="Label2" type="Label" parent="CPU"]
-offset_left = 10.0
-offset_top = 134.0
-offset_right = 188.0
-offset_bottom = 244.0
+offset_left = 1005.0
+offset_top = 363.0
+offset_right = 1183.0
+offset_bottom = 473.0
 theme_override_font_sizes/font_size = 80
 text = "Hola"
+
+[node name="Espada2" type="Sprite2D" parent="CPU"]
+position = Vector2(890, 320)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_r7tc2")
+flip_h = true
+
+[node name="Escudo2" type="Sprite2D" parent="CPU"]
+position = Vector2(876, 364)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_qeoj1")
 
 [node name="tiempo" type="ProgressBar" parent="."]
 offset_left = 318.0
@@ -74,5 +90,19 @@ text = "GANASTE!"
 script = ExtResource("4_cavki")
 
 [node name="Timer" type="Timer" parent="Win"]
+wait_time = 0.5
+one_shot = true
+
+[node name="Lose" type="Label" parent="."]
+visible = false
+offset_left = 108.0
+offset_top = 161.0
+offset_right = 1064.0
+offset_bottom = 434.0
+theme_override_font_sizes/font_size = 200
+text = "PERDISTE!"
+script = ExtResource("7_gcktx")
+
+[node name="Timer" type="Timer" parent="Lose"]
 wait_time = 0.5
 one_shot = true
