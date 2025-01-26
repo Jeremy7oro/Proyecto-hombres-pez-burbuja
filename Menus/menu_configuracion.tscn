@@ -1,0 +1,131 @@
+[gd_scene load_steps=6 format=3 uid="uid://cjqj76texmsak"]
+
+[ext_resource type="Script" path="res://Menus/BotonMenu.gd" id="1_csqew"]
+[ext_resource type="Script" path="res://Menus/menu_configuracion.gd" id="1_vxqop"]
+
+[sub_resource type="GDScript" id="GDScript_cpb2j"]
+script/source = "extends Control
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4jx3s"]
+bg_color = Color(0.333333, 0.419608, 0.870588, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7jsue"]
+bg_color = Color(0.490196, 0.560784, 0.960784, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="menuConfiguracion" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+script = SubResource("GDScript_cpb2j")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.265361, 0.265361, 0.265361, 1)
+
+[node name="titulo" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -115.0
+offset_top = -272.5
+offset_right = 174.0
+offset_bottom = -217.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "Sonidos"
+
+[node name="Menu" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 533.0
+offset_top = 476.0
+offset_right = 706.0
+offset_bottom = 533.0
+theme_override_font_sizes/font_size = 35
+theme_override_styles/hover = SubResource("StyleBoxFlat_4jx3s")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7jsue")
+text = "Volver"
+script = ExtResource("1_csqew")
+
+[node name="Efectos" type="HSlider" parent="."]
+layout_mode = 0
+offset_left = 432.0
+offset_top = 215.0
+offset_right = 1075.0
+offset_bottom = 270.0
+max_value = 1.0
+step = 0.01
+script = ExtResource("1_vxqop")
+
+[node name="Efectos" type="Label" parent="Efectos"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -179.0
+offset_top = -34.5
+offset_right = -37.0
+offset_bottom = 29.5
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "Efectos
+"
+
+[node name="Musica" type="HSlider" parent="."]
+layout_mode = 0
+offset_left = 434.0
+offset_top = 324.0
+offset_right = 1077.0
+offset_bottom = 379.0
+max_value = 1.0
+step = 0.01
+script = ExtResource("1_vxqop")
+
+[node name="Musica" type="Label" parent="Musica"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -179.0
+offset_top = -34.5
+offset_right = -37.0
+offset_bottom = 29.5
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "Musica
+"
+
+[connection signal="value_changed" from="Efectos" to="." method="_on_efectos_value_changed"]
+[connection signal="value_changed" from="Musica" to="." method="_on_musica_value_changed"]
