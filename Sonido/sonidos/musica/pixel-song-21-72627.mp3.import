@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/pixel-song-21-72627.mp3-3567f681b2a71c444957a
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

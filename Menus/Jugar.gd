@@ -13,4 +13,4 @@ func _process(delta):
 
 
 func _on_pressed() -> void:
-	AudioManager.coin_effect.play()
+	pass

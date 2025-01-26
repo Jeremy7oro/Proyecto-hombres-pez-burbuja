@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/high-risk-266479.mp3-5a3a76ca27ba5fb2b8b1dc1d
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0
