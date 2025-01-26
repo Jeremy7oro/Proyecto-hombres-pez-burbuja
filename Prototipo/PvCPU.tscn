@@ -95,6 +95,7 @@ one_shot = true
 
 [node name="Lose" type="Label" parent="."]
 visible = false
+modulate = Color(0.815686, 0.156863, 0.12549, 1)
 offset_left = 108.0
 offset_top = 161.0
 offset_right = 1064.0

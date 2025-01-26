@@ -37,6 +37,9 @@ func _process(delta: float) -> void:
 			$Espada.position = esp_pos + Vector2(220,150*(Espada-2))
 			$Espada.rotation = -90
 	
+	if GLOBAL.Draw:
+		position.x -= 1
+	
 	#Control
 	if $"../tiempo".value == $"../tiempo".max_value:
 		GLOBAL.Escudo_P1 = Escudo

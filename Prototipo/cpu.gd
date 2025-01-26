@@ -27,4 +27,5 @@ func _process(delta: float) -> void:
 		GLOBAL.Espada_P2 = Espada
 		
 		#Aimación
-		
+		if GLOBAL.Draw:
+			position.x += 1
