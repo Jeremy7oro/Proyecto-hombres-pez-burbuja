@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://dgo4v1eer41f8"]
+
+[node name="configuracion" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 11.0
+offset_top = 8.0
+offset_right = 11.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.290196, 0.290196, 0.290196, 1)
+
+[node name="titulo" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -295.0
+offset_right = 160.0
+offset_bottom = -223.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "Configuración"
+
+[node name="Label" type="Label" parent="ColorRect/titulo"]
+layout_mode = 0
+offset_left = -246.0
+offset_top = 170.0
+offset_right = -115.0
+offset_bottom = 228.0
+theme_override_font_sizes/font_size = 40
+text = "Sonido"
+
+[node name="Label" type="Label" parent="ColorRect/titulo/Label"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 115.0
+offset_right = 137.0
+offset_bottom = 173.0
+theme_override_font_sizes/font_size = 40
+text = "Efectos"

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://8q7id76xgodo"]
+
+[ext_resource type="Texture2D" uid="uid://tk30hpp21nbg" path="res://ARTE/paltaman.png" id="1_hmxj6"]
+
+[node name="Sprite2D" type="Sprite2D"]
+position = Vector2(635, 293)
+texture = ExtResource("1_hmxj6")
