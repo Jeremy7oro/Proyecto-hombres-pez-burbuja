@@ -1,86 +1,73 @@
-[gd_scene load_steps=10 format=3 uid="uid://fsec0kfmaw1x"]
+[gd_scene load_steps=14 format=3 uid="uid://fsec0kfmaw1x"]
 
+[ext_resource type="Texture2D" uid="uid://fgb6qsc6xe65" path="res://ARTE/IA/play 2.png" id="1_3m3l7"]
 [ext_resource type="Script" path="res://Prototipo/player1.gd" id="1_8gn6f"]
 [ext_resource type="Script" path="res://Prototipo/cpu.gd" id="2_b3f0h"]
-[ext_resource type="Texture2D" uid="uid://m7narcwg12qu" path="res://ARTE/imagenes/Escudo.png" id="2_qeoj1"]
 [ext_resource type="Script" path="res://Prototipo/tiempo.gd" id="3_q76w2"]
-[ext_resource type="Texture2D" uid="uid://d3bu8sjqaf3mm" path="res://ARTE/imagenes/Espada.png" id="3_r7tc2"]
 [ext_resource type="Script" path="res://Prototipo/win.gd" id="4_cavki"]
-[ext_resource type="Texture2D" uid="uid://xan5mu87ilp4" path="res://ARTE/juego burbuja/escudo abajo espada arriba.png" id="4_tm172"]
+[ext_resource type="Texture2D" uid="uid://bf6lj4lx2oy0f" path="res://ARTE/juego burbuja/escudo 1.png" id="6_dumx8"]
+[ext_resource type="Texture2D" uid="uid://064bg3egbv43" path="res://ARTE/juego burbuja/espada 1.png" id="7_ej8ir"]
 [ext_resource type="Script" path="res://Prototipo/lose.gd" id="7_gcktx"]
+[ext_resource type="Texture2D" uid="uid://3gbuso55tyrn" path="res://ARTE/juego burbuja/escudo 2.png" id="8_s6sre"]
+[ext_resource type="Texture2D" uid="uid://crccg41ix7iqd" path="res://ARTE/juego burbuja/espada 2.png" id="9_3h7e2"]
 [ext_resource type="AudioStream" uid="uid://bvxfo1irnl8x" path="res://Sonido/sonidos/musica/jugando.mp3" id="9_83xv1"]
+[ext_resource type="Texture2D" uid="uid://bnoqgjd04r2co" path="res://ARTE/juego burbuja/cuerpo 1.png" id="10_4o0wj"]
+[ext_resource type="Texture2D" uid="uid://bffpivv87gngu" path="res://ARTE/juego burbuja/cuerpo 2.png" id="11_xhn6c"]
 
 [node name="PvCPU" type="Node2D"]
 
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_3m3l7")
+
 [node name="Player1" type="Node2D" parent="."]
-position = Vector2(92, 6)
+position = Vector2(4, 3)
 script = ExtResource("1_8gn6f")
-
-[node name="Espada" type="Sprite2D" parent="Player1"]
-position = Vector2(291, 319)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("3_r7tc2")
-
-[node name="Escudo" type="Sprite2D" parent="Player1"]
-position = Vector2(300, 363)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("2_qeoj1")
-flip_h = true
-
-[node name="Label" type="Label" parent="Player1"]
-offset_left = 36.0
-offset_top = 204.0
-offset_right = 214.0
-offset_bottom = 314.0
-theme_override_font_sizes/font_size = 80
-text = "Hola"
-
-[node name="Label2" type="Label" parent="Player1"]
-offset_left = 42.0
-offset_top = 366.0
-offset_right = 220.0
-offset_bottom = 476.0
-theme_override_font_sizes/font_size = 80
-text = "Hola"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Player1"]
 volume_db = -14.0
 autoplay = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Player1"]
-position = Vector2(17, 82)
-texture = ExtResource("4_tm172")
+[node name="Cuerpo 1" type="Sprite2D" parent="Player1"]
+texture_filter = 1
+position = Vector2(314, 368)
+scale = Vector2(2.91704, 3.43483)
+texture = ExtResource("10_4o0wj")
+
+[node name="Escudo" type="Sprite2D" parent="Player1"]
+texture_filter = 1
+position = Vector2(318, 357)
+scale = Vector2(2.91704, 3.43483)
+texture = ExtResource("6_dumx8")
+
+[node name="Espada" type="Sprite2D" parent="Player1"]
+texture_filter = 1
+position = Vector2(320, 367)
+scale = Vector2(2.91704, 3.43483)
+texture = ExtResource("7_ej8ir")
 
 [node name="CPU" type="Node2D" parent="."]
 position = Vector2(-80, 12)
 script = ExtResource("2_b3f0h")
 
-[node name="Label" type="Label" parent="CPU"]
-offset_left = 995.0
-offset_top = 222.0
-offset_right = 1173.0
-offset_bottom = 332.0
-theme_override_font_sizes/font_size = 80
-text = "Hola"
-
-[node name="Label2" type="Label" parent="CPU"]
-offset_left = 1005.0
-offset_top = 363.0
-offset_right = 1183.0
-offset_bottom = 473.0
-theme_override_font_sizes/font_size = 80
-text = "Hola"
-
-[node name="Espada2" type="Sprite2D" parent="CPU"]
-position = Vector2(890, 320)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("3_r7tc2")
-flip_h = true
+[node name="Cuerpo 2" type="Sprite2D" parent="CPU"]
+texture_filter = 1
+position = Vector2(990, 358)
+scale = Vector2(2.91704, 3.43483)
+texture = ExtResource("11_xhn6c")
 
 [node name="Escudo2" type="Sprite2D" parent="CPU"]
-position = Vector2(876, 364)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("2_qeoj1")
+texture_filter = 1
+position = Vector2(990, 358)
+scale = Vector2(2.91704, 3.43483)
+texture = ExtResource("8_s6sre")
+
+[node name="Espada2" type="Sprite2D" parent="CPU"]
+texture_filter = 1
+position = Vector2(990, 358)
+scale = Vector2(2.91704, 3.43483)
+texture = ExtResource("9_3h7e2")
 
 [node name="tiempo" type="ProgressBar" parent="."]
 offset_left = 318.0

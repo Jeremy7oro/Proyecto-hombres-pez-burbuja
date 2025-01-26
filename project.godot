@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Hombre-Pez-Burbuja"
-run/main_scene="res://Menus/Menu.tscn"
+run/main_scene="res://Finale/Caratula.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://ARTE/icon.svg"
 

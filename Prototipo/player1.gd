@@ -13,8 +13,7 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	$Label.text = str(GLOBAL.Escudo_P1)
-	$Label2.text = str(GLOBAL.Espada_P1)
+	
 	if $"../tiempo".value < $"../tiempo".max_value:
 		if Escudo <= 0:
 			if Input.is_action_pressed("Arriba"):

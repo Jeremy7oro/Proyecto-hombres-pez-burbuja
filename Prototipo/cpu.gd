@@ -10,8 +10,7 @@ var Espada : int
 
 
 func _process(delta: float) -> void:
-	$Label.text = str(GLOBAL.Escudo_P2)
-	$Label2.text = str(GLOBAL.Espada_P2)
+	
 	if $"../tiempo".value == $"../tiempo".max_value:
 		if Escudo <= 0:
 			Escudo = randi_range(1,3)

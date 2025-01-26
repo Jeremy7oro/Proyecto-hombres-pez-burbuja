@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://bil7gfwhnec2p"]
+[gd_scene load_steps=4 format=3 uid="uid://bil7gfwhnec2p"]
 
 [ext_resource type="Script" path="res://Prototipo/volume_control.gd" id="1_tuynb"]
+[ext_resource type="AudioStream" uid="uid://cq8b7jrqtgj07" path="res://Sonido/sonidos/musica/Lento.mp3" id="2_3umle"]
+[ext_resource type="Texture2D" uid="uid://rsfry2l6e62d" path="res://ARTE/IA/config 2.png" id="2_47nsl"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -10,6 +12,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_tuynb")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_47nsl")
 
 [node name="Sonidos" type="Label" parent="."]
 layout_mode = 0
@@ -57,6 +65,10 @@ offset_right = -17.0
 offset_bottom = 44.0
 theme_override_font_sizes/font_size = 40
 text = "Efects"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_3umle")
+volume_db = -5.0
 
 [connection signal="value_changed" from="music_control" to="." method="_on_music_control_value_changed"]
 [connection signal="value_changed" from="effect_control" to="." method="_on_effect_control_value_changed"]
