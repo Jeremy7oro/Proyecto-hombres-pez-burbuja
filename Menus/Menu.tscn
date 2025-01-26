@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://biv7udloloxb5"]
+[gd_scene load_steps=11 format=3 uid="uid://biv7udloloxb5"]
 
 [ext_resource type="Script" path="res://Menus/jugar.gd" id="1_10p47"]
 [ext_resource type="Script" path="res://Menus/ButtonConfiguracion.gd" id="2_iygfq"]
 [ext_resource type="Script" path="res://Menus/salir.gd" id="2_t4anm"]
+[ext_resource type="AudioStream" uid="uid://ccf33q3bo3npo" path="res://Sonido/sonidos/musica/pixel-song-21-72593.mp3" id="4_rdfe2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h78gf"]
 bg_color = Color(0.333333, 0.419608, 0.870588, 1)
@@ -107,3 +108,10 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_y4u7x")
 theme_override_styles/normal = SubResource("StyleBoxFlat_dtkbe")
 text = "EXIT"
 script = ExtResource("2_t4anm")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_rdfe2")
+volume_db = -7.0
+autoplay = true
+bus = &"Music"
+parameters/looping = true

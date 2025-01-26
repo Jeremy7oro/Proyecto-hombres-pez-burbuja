@@ -12,7 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://bo3o81j6yjrlu" path="res://Sonido/sonidos/musica/high-risk-266479.mp3" id="10_vrtab"]
 [ext_resource type="AudioStream" uid="uid://c5klo6237xlir" path="res://Sonido/sonidos/musica/kl-peach-game-over-iii-142453.mp3" id="11_7qc3h"]
 [ext_resource type="AudioStream" uid="uid://drokk8bsfdo8c" path="res://Sonido/sonidos/musica/pixel-song-3-72687.mp3" id="12_dy8d2"]
-[ext_resource type="AudioStream" uid="uid://bvxfo1irnl8x" path="res://Sonido/sonidos/musica/pixel-song-18-72641.mp3" id="13_w0ahw"]
+[ext_resource type="AudioStream" uid="uid://bvxfo1irnl8x" path="res://Sonido/sonidos/musica/jugando.mp3" id="13_w0ahw"]
 [ext_resource type="AudioStream" uid="uid://ccf33q3bo3npo" path="res://Sonido/sonidos/musica/pixel-song-21-72593.mp3" id="14_p6vi7"]
 [ext_resource type="AudioStream" uid="uid://do6j3o3r68wrm" path="res://Sonido/sonidos/musica/pixel-song-21-72627.mp3" id="15_b77jf"]
 [ext_resource type="AudioStream" uid="uid://ihlwl3edogkg" path="res://Sonido/sonidos/musica/pixel-song-27-72476.mp3" id="16_1jo5t"]

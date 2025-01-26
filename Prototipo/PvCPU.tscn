@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://fsec0kfmaw1x"]
+[gd_scene load_steps=10 format=3 uid="uid://fsec0kfmaw1x"]
 
 [ext_resource type="Script" path="res://Prototipo/player1.gd" id="1_8gn6f"]
 [ext_resource type="Script" path="res://Prototipo/cpu.gd" id="2_b3f0h"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://Prototipo/win.gd" id="4_cavki"]
 [ext_resource type="Texture2D" uid="uid://xan5mu87ilp4" path="res://ARTE/juego burbuja/escudo abajo espada arriba.png" id="4_tm172"]
 [ext_resource type="Script" path="res://Prototipo/lose.gd" id="7_gcktx"]
+[ext_resource type="AudioStream" uid="uid://bvxfo1irnl8x" path="res://Sonido/sonidos/musica/jugando.mp3" id="9_83xv1"]
 
 [node name="PvCPU" type="Node2D"]
 
@@ -116,3 +117,9 @@ script = ExtResource("7_gcktx")
 [node name="Timer" type="Timer" parent="Lose"]
 wait_time = 0.5
 one_shot = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_83xv1")
+autoplay = true
+bus = &"Music"
+parameters/looping = true
