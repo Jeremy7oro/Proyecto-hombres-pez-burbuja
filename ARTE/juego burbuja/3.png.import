@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5tng3fnoq00x"
-path="res://.godot/imported/escudo medio espada arriba.png-6c8c69773859c83bb1b5ba1cbac608be.ctex"
+uid="uid://bwbkf6bmqckuo"
+path="res://.godot/imported/3.png-3681660cefdfe54f6f3447004df194cf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ARTE/juego burbuja/escudo medio espada arriba.png"
-dest_files=["res://.godot/imported/escudo medio espada arriba.png-6c8c69773859c83bb1b5ba1cbac608be.ctex"]
+source_file="res://ARTE/juego burbuja/3.png"
+dest_files=["res://.godot/imported/3.png-3681660cefdfe54f6f3447004df194cf.ctex"]
 
 [params]
 

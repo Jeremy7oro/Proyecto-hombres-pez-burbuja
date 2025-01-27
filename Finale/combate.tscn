@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://bwikv6do88i5v"]
+
+[ext_resource type="AudioStream" uid="uid://bvxfo1irnl8x" path="res://Sonido/sonidos/musica/jugando.mp3" id="1_d3bcd"]
+[ext_resource type="PackedScene" uid="uid://fsec0kfmaw1x" path="res://Prototipo/PvCPU.tscn" id="1_f2gv6"]
+[ext_resource type="Script" path="res://combate.gd" id="1_thlce"]
+[ext_resource type="Script" path="res://Menus/BotonMenu.gd" id="4_53psl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gnbd0"]
+bg_color = Color(0.333333, 0.419608, 0.870588, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5meve"]
+bg_color = Color(0.490196, 0.560784, 0.960784, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Combate" type="Node2D"]
+script = ExtResource("1_thlce")
+Reset = ExtResource("1_f2gv6")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_d3bcd")
+autoplay = true
+parameters/looping = true
+
+[node name="PvCPU" parent="." instance=ExtResource("1_f2gv6")]
+
+[node name="Exit" type="Button" parent="."]
+offset_left = 31.0
+offset_top = 18.0
+offset_right = 204.0
+offset_bottom = 75.0
+theme_override_font_sizes/font_size = 35
+theme_override_styles/hover = SubResource("StyleBoxFlat_gnbd0")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5meve")
+text = "Exit"
+script = ExtResource("4_53psl")

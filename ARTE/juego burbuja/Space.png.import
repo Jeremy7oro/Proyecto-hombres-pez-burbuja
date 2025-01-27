@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0jjtlleibg1l"
-path="res://.godot/imported/escudo arriba espada abajo.png-12fea97f0b69003ebd736c352f4a214c.ctex"
+uid="uid://b2te4da4316vh"
+path="res://.godot/imported/Space.png-2ab91339a3ab8921317e4b5c79dc479b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ARTE/juego burbuja/escudo arriba espada abajo.png"
-dest_files=["res://.godot/imported/escudo arriba espada abajo.png-12fea97f0b69003ebd736c352f4a214c.ctex"]
+source_file="res://ARTE/juego burbuja/Space.png"
+dest_files=["res://.godot/imported/Space.png-2ab91339a3ab8921317e4b5c79dc479b.ctex"]
 
 [params]
 

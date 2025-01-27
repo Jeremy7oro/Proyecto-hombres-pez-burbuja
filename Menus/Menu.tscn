@@ -112,12 +112,10 @@ script = ExtResource("2_t4anm")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamMP3_qybhs")
-volume_db = -7.0
+volume_db = -10.0
 autoplay = true
 bus = &"Music"
 parameters/looping = true
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0

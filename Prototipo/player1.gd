@@ -4,8 +4,8 @@ var Escudo : int
 var Espada : int
 
 #Animaciones
-@onready var esc_pos = $Escudo.position
-@onready var esp_pos = $Espada.position
+#@onready var esc_pos = $Escudo.position
+#@onready var esp_pos = $Espada.position
 
 func _ready() -> void:
 	Escudo = 0
@@ -40,9 +40,25 @@ func _process(delta: float) -> void:
 			$Label2.text = str(GLOBAL.Espada_P1)
 	
 	if GLOBAL.Draw:
-		position.x -= 1
+		pass
 	
 	#Control
 	if $"../tiempo".value == $"../tiempo".max_value:
 		GLOBAL.Escudo_P1 = Escudo
 		GLOBAL.Espada_P1 = Espada
+		
+	if $"../tiempo".value > 90 and $"../tiempo".value < 99:
+		$"Cuerpo/AnimationPlayer".play("Enfrente")
+		if Escudo == 1:
+			$"Cuerpo/Escudo/AnimationPlayer".play("Arriba")
+		elif Escudo == 2:
+			$"Cuerpo/Escudo/AnimationPlayer".play("Medio")
+		elif Escudo == 3:
+			$"Cuerpo/Escudo/AnimationPlayer".play("Abajo")
+		
+		if Espada == 1:
+			$"Cuerpo/Espada/AnimationPlayer".play("Arriba")
+		elif Espada == 2:
+			$"Cuerpo/Espada/AnimationPlayer".play("Medio")
+		elif Espada == 3:
+			$"Cuerpo/Espada/AnimationPlayer".play("Abajo")

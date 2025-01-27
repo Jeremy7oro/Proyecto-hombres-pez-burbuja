@@ -4,14 +4,14 @@ var Escudo : int
 var Espada : int
 
 #Animaciones
-@onready var esc_pos = $Escudo2.position
-@onready var esp_pos = $Espada2.position
+#@onready var esc_pos = $Escudo2.position
+#@onready var esp_pos = $Espada2.position
 
 
 
 func _process(delta: float) -> void:
 	
-	if $"../tiempo".value == $"../tiempo".max_value:
+	if $"../tiempo".value > 90 and $"../tiempo".value < 99:
 		if Escudo <= 0:
 			Escudo = randi_range(1,3)
 		else:
@@ -29,6 +29,20 @@ func _process(delta: float) -> void:
 		if GLOBAL.Draw:
 			position.x += 1
 	
-	#Reset
-	if Input.is_key_pressed(KEY_R) or Input.is_key_pressed(KEY_SPACE) :
-		get_tree().change_scene_to_file("res://Prototipo/PvCPU.tscn")
+	
+	#ANIMACION
+	if $"../tiempo".value > 90 and $"../tiempo".value < 99:
+		$"Cuerpo/AnimationPlayer".play("Enfrente")
+		if Escudo == 1:
+			$"Cuerpo/Escudo/AnimationPlayer".play("Arriba")
+		elif Escudo == 2:
+			$"Cuerpo/Escudo/AnimationPlayer".play("Medio")
+		elif Escudo == 3:
+			$"Cuerpo/Escudo/AnimationPlayer".play("Abajo")
+		
+		if Espada == 1:
+			$"Cuerpo/Espada/AnimationPlayer".play("Arriba")
+		elif Espada == 2:
+			$"Cuerpo/Espada/AnimationPlayer".play("Medio")
+		elif Espada == 3:
+			$"Cuerpo/Espada/AnimationPlayer".play("Abajo")

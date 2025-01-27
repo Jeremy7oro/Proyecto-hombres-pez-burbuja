@@ -1,8 +1,23 @@
-[gd_scene load_steps=4 format=3 uid="uid://bil7gfwhnec2p"]
+[gd_scene load_steps=7 format=3 uid="uid://bil7gfwhnec2p"]
 
 [ext_resource type="Script" path="res://Prototipo/volume_control.gd" id="1_tuynb"]
 [ext_resource type="AudioStream" uid="uid://cq8b7jrqtgj07" path="res://Sonido/sonidos/musica/Lento.mp3" id="2_3umle"]
 [ext_resource type="Texture2D" uid="uid://rsfry2l6e62d" path="res://ARTE/IA/config 2.png" id="2_47nsl"]
+[ext_resource type="Script" path="res://Menus/BotonMenu.gd" id="4_xogli"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0wv3q"]
+bg_color = Color(0.333333, 0.419608, 0.870588, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4apb4"]
+bg_color = Color(0.490196, 0.560784, 0.960784, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -69,6 +84,19 @@ text = "Efects"
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_3umle")
 volume_db = -5.0
+autoplay = true
+parameters/looping = true
+
+[node name="Exit" type="Button" parent="."]
+offset_left = 521.0
+offset_top = 569.0
+offset_right = 694.0
+offset_bottom = 626.0
+theme_override_font_sizes/font_size = 35
+theme_override_styles/hover = SubResource("StyleBoxFlat_0wv3q")
+theme_override_styles/normal = SubResource("StyleBoxFlat_4apb4")
+text = "Exit"
+script = ExtResource("4_xogli")
 
 [connection signal="value_changed" from="music_control" to="." method="_on_music_control_value_changed"]
 [connection signal="value_changed" from="effect_control" to="." method="_on_effect_control_value_changed"]

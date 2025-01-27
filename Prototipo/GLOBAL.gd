@@ -35,6 +35,7 @@ func _process(delta: float) -> void:
 		Win = false
 		Lose = false
 		Draw = false
+		Turno = false
 		Espada_P1 = 0
 		Escudo_P1 = 0
 		Espada_P2 = 0
